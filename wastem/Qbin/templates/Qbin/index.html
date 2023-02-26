@@ -1,0 +1,183 @@
+{% extends 'Qbin/base.html'%}
+{% load static %}
+
+{% block css %}
+<link href="{% static './Qbin/css/index.css' %}" rel="stylesheet" type="text/css" />
+<style>
+  .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffffac ;
+  border-radius: 2rem;
+  padding: 5rem;
+  color: #197854;
+}
+</style>
+{% endblock css %}
+
+
+{% block content01 %}
+
+<div class="hero">
+  <img src="{% static './Qbin/images/kachra.jpg' %}" alt="">
+  <div class="centered"><h1><b>Reducing waste, enhancing
+    sustainability: The smart solution for
+    a cleaner future.</b></h1></div>
+
+</div>
+
+<div class="group1">
+  <!-- Our working process start -->
+  <h2>What We Provide</h2>
+  <div class="work-container">
+
+    <div class="work-card">
+      <div class="work-img">
+        <img src="{% static './Qbin/images/coll.jpeg' %}" alt="">
+      </div>
+      <div class="work-head">
+        <h4>Pickup</h4>
+      </div>
+      <div class="work-para">
+        <p>The user generates pickup request using 'pickup' button</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-img">
+        <img src="{% static './Qbin/images/vehical.jpeg' %}" alt="">
+      </div>
+      <div class="work-head">
+        <h4>Collection</h4>
+      </div>
+      <div class="work-para">
+        <p>This request is then transferred to the administrator.</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-img">
+        <img src="{% static './Qbin/images/recycle.jpeg' %}" alt="">
+      </div>
+      <div class="work-head">
+        <h4>Proceesing and disposing</h4>
+      </div>
+      <div class="work-para">
+        <p>The administrator then approves the request.The vehicle is then deployed to the user location.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Our working process end -->
+
+</div>
+<div id="services">
+<div class="pickup">
+  <h2>Request a Pickup</h2>
+  <div class="pickupc">
+    <div class="rightp">
+      <div class="pickimg">
+        <img src="{% static './Qbin/images/truck (1).png' %}" alt="">
+      </div>
+    </div>
+    <div class="leftp">
+      <h4>Our goal is to make waste management as seamless and stress-free as possible for our clients, while also
+        promoting sustainability and environmental responsibility.A system that ensures timely and reliable waste pickup
+        services. Our services are designed to meet the needs of both residential and commercial clients, and we are
+        committed to providing the highest level of customer satisfaction.</h4>
+      {% if user.is_authenticated %}
+      <button class="button-41" role="button"><a href="{% url 'create_request' %}">PICKUP REQUEST </a></button>
+      {% else %}
+      <button class="button-41" role="button" onclick="myFunction()">PICKUP REQUEST</button>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<div class="group2">
+  <div class="wrapper">
+    <section class="section section1">
+      <div class="leftsection1">
+        <h2>Making <br>things <br> Better .</h2>
+      </div>
+      <div class="rightsection1">
+        <p>Welcome to mybinbuddy , your one-stop solution for waste management and pickup services. We are dedicated to
+          providing the best and most efficient waste management services to our clients.Our goal is to make waste
+          management as seamless and stress-free as possible for our clients, while also promoting sustainability and
+          environmental responsibility.
+          A system that ensures timely and reliable waste pickup services. Our services are designed to meet the needs
+          of both residential and commercial clients, and we are committed to providing the highest level of customer
+          satisfaction.
+        </p>
+        <img src="{% static './Qbin/images/planet1.png' %}" alt="" height="270px" width="250px">
+      </div>
+
+
+    </section>
+    <section class="section section2">
+      <div class="leftsection1">
+
+        <p>We at MyBinBuddy strive to provide our clients with the most efficient, affordable, and convenient waste
+          management services. We are dedicated to ensuring that every customer feels comfortable when using our system.
+          More importantly, we are committed to promoting sustainability through our work ethic and environmental
+          responsibility.
+        </p>
+        <img src="{% static './Qbin/images/planet-removebg-preview.png' %}" width="350px" height="350px">
+      </div>
+      <div class="rightsection1">
+        <span>
+          <h2>Making <br>things <br> Better .</h2>
+        </span>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div class="group3">
+
+  <div class="left">
+    <h2>Recycling a single plastic bottle can conserve enough energy to light a 60W bulb upto 6 hours. </h2>
+  </div>
+  <div class="right">
+    <img src="{% static './Qbin/images/bottle.png' %}">
+  </div>
+</div>
+
+<div class="group3">
+  <div class="right">
+    <img src="{% static './Qbin/images/boat (1).png' %}">
+  </div>
+  <div class="left">
+    <h2>Global waste is expected to grow to 3.4 billion tonnes by 2050, more than double population growth over the same
+      period. </h2>
+  </div>
+
+</div>
+
+<div class="coming">
+  <div class="soon">
+    <h1>Store</h1>
+    <p>Mybinbuddy will be providing you with an store where artisons can sell product created by them.</p>
+    <h6>Coming soon!!</h6>
+  </div>
+</div>
+
+{% endblock content01 %}
+
+{% block js %}
+<script>
+  function myFunction() {
+    alert("Login to generate request");
+  }
+</script>
+{% endblock js %}

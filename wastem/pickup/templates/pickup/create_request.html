@@ -1,0 +1,31 @@
+{% extends 'Qbin/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'user\assests\css\register.css' %}">
+{% endblock css %}
+{% block nav %}
+{% endblock nav %}
+{% block content01 %}
+
+
+<div class="container">
+  <input type="checkbox" id="check">
+  <div class="login form">
+    <h1>Create Pickup Request</h1>
+    <form method="post">
+      <fieldset class="form-group">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+      </fieldset>
+      <div class="form-group my-2">
+        <button class="btn btn-outline-success" type="submit">Sumbit
+            </button>
+    </div>
+  </form>
+  <p>Already made a request? <a href="{% url 'view_request' %}">view requests</a></p>
+  </div></div>
+    {% endblock content01 %}
+    {% block footer %}
+    {% endblock footer %}

@@ -1,0 +1,20 @@
+{% extends 'Qbin/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'user\assests\css\register.css' %}">
+{% endblock css %}
+{% block nav %}
+{% endblock nav %}
+{% block content01%}
+<div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+    <h1>Pickup Request generation</h1>
+    <p>Your pickup request has been submitted!</p>
+    <a href="{% url 'create_request' %}">create another request</a><br>
+    <a href="{% url 'view_request' %}">view requests</a>
+    </div></div>
+{% endblock content01%}
+{% block footer %}
+{% endblock footer %}
