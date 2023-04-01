@@ -2,7 +2,9 @@
 
 This is an automated waste management system that allowed users to request waste pickup and follow the status of their requests. 
 
-Tech stack: Django
+Tech stack: Django , GSAP
+
+Process:As we had only 48 hours to complete the project we started working separately on the backend and frontend. On the first day, we decided the structure of the website and divided the tasks. I started working on the backend in which we integrated a message system using Twilio, which will be sent to the registered number. Through Django, we made an authentication system. Frontend was built using HTML, CSS, bootstrap and javascript.
 
 Features includes:
 1. login/register
